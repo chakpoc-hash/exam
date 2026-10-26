@@ -1,0 +1,116 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}DRIVEON — Автомобили{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'base.css' %}">
+    {% block css_f %}{% endblock %}
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="/" class="brand">
+                <span class="brand-icon">D</span>
+                <span>DRIVE<span class="brand-accent">ON</span></span>
+            </a>
+
+            <nav class="main-nav">
+                <a href="/" class="nav-link active">Главная</a>
+                <a href="#cars" class="nav-link">Автомобили</a>
+                <a href="#rent" class="nav-link">Аренда</a>
+                <a href="#about" class="nav-link">О нас</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#cars" class="header-search" aria-label="Найти автомобиль">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="m16 16 4 4"></path>
+                    </svg>
+                </a>
+
+                <a href="#cars" class="header-button">
+                    Найти авто
+                    <span>↗</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <div class="footer-top">
+
+                <div class="footer-brand-column">
+                    <a href="/" class="brand footer-brand">
+                        <span class="brand-icon">D</span>
+                        <span>DRIVE<span class="brand-accent">ON</span></span>
+                    </a>
+
+                    <p class="footer-description">
+                        Твой следующий автомобиль начинается здесь.
+                        Покупка и аренда без лишних сложностей.
+                    </p>
+
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram">ig</a>
+                        <a href="#" aria-label="Telegram">tg</a>
+                        <a href="#" aria-label="YouTube">yt</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Автомобили</h3>
+                    <a href="#cars">Все автомобили</a>
+                    <a href="#buy">Купить автомобиль</a>
+                    <a href="#rent">Арендовать</a>
+                    <a href="#popular">Популярные модели</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Компания</h3>
+                    <a href="#about">О нас</a>
+                    <a href="#advantages">Наши преимущества</a>
+                    <a href="#contacts">Контакты</a>
+                    <a href="#faq">Частые вопросы</a>
+                </div>
+
+                <div class="footer-contact">
+                    <span class="footer-label">ЕСТЬ ВОПРОСЫ?</span>
+                    <h3>Давай найдём<br>твоё авто.</h3>
+                    <a href="mailto:info@driveon.example" class="footer-contact-link">
+                        Связаться с нами ↗
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© {% now "Y" %} DRIVEON. Все права защищены.</p>
+
+                <div class="footer-legal">
+                    <a href="#privacy">Конфиденциальность</a>
+                    <a href="#terms">Условия использования</a>
+                </div>
+
+                <span class="footer-location">DRIVE YOUR WAY.</span>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
