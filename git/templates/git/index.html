@@ -1,0 +1,328 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+hfvbksdf
+{% endblock %}
+
+{% block css_f %}
+<link rel="stylesheet" href="{% static 'git/index.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="drive-home">
+
+    <!-- HERO -->
+    <section class="drive-hero">
+        <div class="drive-hero__glow"></div>
+
+        <div class="drive-hero__content">
+            <div class="drive-eyebrow">
+                <span class="drive-eyebrow__dot"></span>
+                ТВОЯ СЛЕДУЮЩАЯ ПОЕЗДКА НАЧИНАЕТСЯ ЗДЕСЬ
+            </div>
+
+            <h1>
+                Найди свой
+                <span>идеальный</span>
+                автомобиль.
+            </h1>
+
+            <p class="drive-hero__description">
+                Покупай автомобиль мечты или арендуй его для следующего
+                путешествия. Выбирай свой стиль, мы позаботимся об остальном.
+            </p>
+
+            <div class="drive-hero__actions">
+                <a href="#drive-catalog" class="drive-button drive-button--primary">
+                    Найти автомобиль
+                    <span>↗</span>
+                </a>
+
+                <a href="#drive-categories" class="drive-button drive-button--outline">
+                    Исследовать каталог
+                    <span>↓</span>
+                </a>
+            </div>
+
+            <div class="drive-hero__trust">
+                <div class="drive-trust-item">
+                    <span class="drive-trust-item__icon">✓</span>
+                    <span>Простой поиск</span>
+                </div>
+
+                <div class="drive-trust-item">
+                    <span class="drive-trust-item__icon">✓</span>
+                    <span>Покупка и аренда</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="drive-hero__visual">
+            <div class="drive-hero__visual-label">
+                <span class="drive-hero__visual-line"></span>
+                DRIVE YOUR WAY
+            </div>
+
+            <div class="drive-hero__image">
+                <img
+                    src="{% static 'xanut/images/hero-car.png' %}"
+                    alt="Премиальный автомобиль DRIVEON"
+                >
+            </div>
+
+            <div class="drive-hero__floating-card">
+                <span class="drive-floating-card__label">ТВОЙ ВЫБОР</span>
+                <strong>Твой маршрут.</strong>
+                <span class="drive-floating-card__bottom">
+                    Твои правила
+                    <span>↗</span>
+                </span>
+            </div>
+
+            <div class="drive-hero__index">01 <span>/ 03</span></div>
+        </div>
+
+        <div class="drive-hero__bottom">
+            <span>ПОКУПАЙ. АРЕНДУЙ. ОТКРЫВАЙ.</span>
+            <a href="#drive-catalog">
+                Листай вниз
+                <span>↓</span>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- SEARCH -->
+    <section class="drive-search" id="drive-catalog">
+        <div class="drive-search__heading">
+            <div>
+                <span class="drive-section-label">ТВОЙ ПОИСК НАЧИНАЕТСЯ ЗДЕСЬ</span>
+                <h2>Какой автомобиль ищем?</h2>
+            </div>
+
+            <span class="drive-search__number">01 — ПОИСК</span>
+        </div>
+
+        <form class="drive-search__form" method="get" action="#">
+            <label class="drive-search__field">
+                <span>Марка или модель</span>
+                <input
+                    type="text"
+                    name="q"
+                    placeholder="Например, BMW, Mercedes..."
+                >
+            </label>
+
+            <label class="drive-search__field">
+                <span>Цель</span>
+                <select name="deal">
+                    <option value="">Покупка или аренда</option>
+                    <option value="buy">Купить</option>
+                    <option value="rent">Арендовать</option>
+                </select>
+            </label>
+
+            <label class="drive-search__field">
+                <span>Тип автомобиля</span>
+                <select name="type">
+                    <option value="">Все автомобили</option>
+                    <option value="sedan">Седан</option>
+                    <option value="suv">Внедорожник</option>
+                    <option value="sport">Спорткар</option>
+                    <option value="electric">Электромобиль</option>
+                </select>
+            </label>
+
+            <button class="drive-search__submit" type="submit">
+                <span>Найти</span>
+                <span>↗</span>
+            </button>
+        </form>
+
+        <div class="drive-search__note">
+            <span class="drive-search__note-dot"></span>
+            Подбери автомобиль под свои планы
+        </div>
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="drive-categories" id="drive-categories">
+        <div class="drive-section-heading">
+            <div>
+                <span class="drive-section-label">ВЫБИРАЙ СВОЙ СТИЛЬ</span>
+                <h2>Что тебе по душе?</h2>
+            </div>
+
+            <p>
+                От городских поездок до больших приключений —
+                найди машину под любое настроение.
+            </p>
+        </div>
+
+        <div class="drive-category-grid">
+
+            <a href="#drive-catalog" class="drive-category drive-category--sport">
+                <div class="drive-category__top">
+                    <span class="drive-category__number">01</span>
+                    <span class="drive-category__arrow">↗</span>
+                </div>
+
+                <div class="drive-category__art drive-category__art--sport">
+                    <span class="drive-category__symbol">S</span>
+                </div>
+
+                <div class="drive-category__bottom">
+                    <div>
+                        <h3>Спорткары</h3>
+                        <p>Эмоции на каждом километре</p>
+                    </div>
+                    <span class="drive-category__go">↗</span>
+                </div>
+            </a>
+
+            <a href="#drive-catalog" class="drive-category drive-category--suv">
+                <div class="drive-category__top">
+                    <span class="drive-category__number">02</span>
+                    <span class="drive-category__arrow">↗</span>
+                </div>
+
+                <div class="drive-category__art drive-category__art--suv">
+                    <span class="drive-category__symbol">X</span>
+                </div>
+
+                <div class="drive-category__bottom">
+                    <div>
+                        <h3>Внедорожники</h3>
+                        <p>Свобода без границ</p>
+                    </div>
+                    <span class="drive-category__go">↗</span>
+                </div>
+            </a>
+
+            <a href="#drive-catalog" class="drive-category drive-category--city">
+                <div class="drive-category__top">
+                    <span class="drive-category__number">03</span>
+                    <span class="drive-category__arrow">↗</span>
+                </div>
+
+                <div class="drive-category__art drive-category__art--city">
+                    <span class="drive-category__symbol">C</span>
+                </div>
+
+                <div class="drive-category__bottom">
+                    <div>
+                        <h3>Для города</h3>
+                        <p>Комфорт каждый день</p>
+                    </div>
+                    <span class="drive-category__go">↗</span>
+                </div>
+            </a>
+
+            <a href="#drive-catalog" class="drive-category drive-category--electric">
+                <div class="drive-category__top">
+                    <span class="drive-category__number">04</span>
+                    <span class="drive-category__arrow">↗</span>
+                </div>
+
+                <div class="drive-category__art drive-category__art--electric">
+                    <span class="drive-category__symbol">E</span>
+                </div>
+
+                <div class="drive-category__bottom">
+                    <div>
+                        <h3>Электрокары</h3>
+                        <p>Двигайся в будущее</p>
+                    </div>
+                    <span class="drive-category__go">↗</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- BUY OR RENT -->
+    <section class="drive-choice" id="rent">
+        <div class="drive-choice__intro">
+            <span class="drive-section-label">ОДНА ПЛАТФОРМА — БОЛЬШЕ ВОЗМОЖНОСТЕЙ</span>
+            <h2>Тебе решать.<br><span>Нам — помочь.</span></h2>
+        </div>
+
+        <div class="drive-choice__grid">
+
+            <article class="drive-choice-card drive-choice-card--buy">
+                <div class="drive-choice-card__top">
+                    <span class="drive-choice-card__tag">01 / ПОКУПКА</span>
+                    <span class="drive-choice-card__icon">↗</span>
+                </div>
+
+                <div class="drive-choice-card__content">
+                    <span class="drive-choice-card__eyebrow">НАЙДИ СВОЁ</span>
+                    <h3>Автомобиль,<br>который станет твоим.</h3>
+                    <p>
+                        Исследуй модели, сравнивай варианты и найди
+                        автомобиль, который подходит именно тебе.
+                    </p>
+                    <a href="#drive-catalog" class="drive-choice-card__link">
+                        Выбрать автомобиль <span>→</span>
+                    </a>
+                </div>
+
+                <div class="drive-choice-card__decoration">BUY</div>
+            </article>
+
+            <article class="drive-choice-card drive-choice-card--rent">
+                <div class="drive-choice-card__top">
+                    <span class="drive-choice-card__tag">02 / АРЕНДА</span>
+                    <span class="drive-choice-card__icon">↗</span>
+                </div>
+
+                <div class="drive-choice-card__content">
+                    <span class="drive-choice-card__eyebrow">ПОЕЗДКА В ТВОЁМ СТИЛЕ</span>
+                    <h3>Нужная машина.<br>Нужный момент.</h3>
+                    <p>
+                        Выбирай автомобиль для путешествия, важной встречи
+                        или просто удовольствия от дороги.
+                    </p>
+                    <a href="#drive-catalog" class="drive-choice-card__link">
+                        Найти для аренды <span>→</span>
+                    </a>
+                </div>
+
+                <div class="drive-choice-card__decoration">RENT</div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="drive-final" id="about">
+        <div class="drive-final__orb"></div>
+
+        <div class="drive-final__content">
+            <span class="drive-section-label">ТВОЯ ИСТОРИЯ НА ДОРОГЕ</span>
+            <h2>
+                Дорога зовёт.<br>
+                <span>Ответь ей.</span>
+            </h2>
+            <p>
+                Следующий автомобиль уже ждёт своего водителя.
+                Найди его вместе с DRIVEON.
+            </p>
+
+            <a href="#drive-catalog" class="drive-button drive-button--primary">
+                Начать поиск
+                <span>↗</span>
+            </a>
+        </div>
+
+        <div class="drive-final__mark">D<span>.</span></div>
+    </section>
+
+</section>
+
+{% endblock %}
